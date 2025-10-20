@@ -2,8 +2,9 @@ body {
   margin: 0;
   overflow: hidden;
   background-color: #000;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'inter', sans-serif;
 }
+
 
 .hero {
   min-height: 100vh;
@@ -133,4 +134,13 @@ body {
 .content {
   position: relative;
   z-index: 10;
+}
+
+.form-control::placeholder, textarea::placeholder{
+    color: #ccc;
+    opacity: 1;
+}
+
+h1{
+    font-family: 'Playfair Display', serif;
 }
