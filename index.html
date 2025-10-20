@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stat3m3nt | Building from Curiosity</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="./css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+      <a class="navbar-brand fw-bold" href="#">Stat3m3nt</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item px-3">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item px-3">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item px-3">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item px-3">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+
+        <div class="ms-auto">
+            <a href="https://github.com/Stat3m3nt" class="btn btn-outline-light me-2"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/andrew-evboifo-78a655187?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BdHrKsJDAQQGWcnPxDnrhIQ%3D%3D" class="btn btn-outline-light"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section id="hero" class="hero d-flex align-items-center justify-content-center text-center text-light">
+    <div class="layer layer-bg"></div>
+    <div class="layer layer-mid"></div>
+    <div class="layer layer-front"></div>
+
+    <!-- Floating shapes -->
+    <div class="floating-shape circle"></div>
+    <div class="floating-shape triangle"></div>
+    <div class="floating-shape square"></div>
+
+    <div class="content position-relative">
+      <h1 class="display-2 fw-bold mb-3 text-glow">The Art of Building</h1>
+      <p class="lead mb-4 fade-in">
+        I'm <span class="text-warning">Stat3m3nt</span> — a builder of ideas, driven by curiosity and shaped by experience.
+      </p>
+      <a href="/page2.html" class="btn btn-outline-light btn-lg px-5 py-3 cta-btn">Discover My Work</a>
+    </div>
+  </section>
+</main>
+
+  <script>
+    document.addEventListener("mousemove", (e) => {
+      const layers = document.querySelectorAll(".layer");
+      const x = (e.clientX / window.innerWidth - 0.5) * 40;
+      const y = (e.clientY / window.innerHeight - 0.5) * 40;
+      layers.forEach((layer, index) => {
+        const speed = (index + 1) * 4;
+        layer.style.transform = `translate(${x / speed}px, ${y / speed}px) scale(1.05)`;
+      });
+    });
+  </script>
+</body>
+</html>

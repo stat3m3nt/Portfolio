@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: #000;
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero {
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  perspective: 1000px;
+}
+
+/* Layer visuals */
+.layer {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform-origin: center;
+  transition: transform 0.2s ease-out;
+  z-index: 0;
+}
+
+.layer-bg {
+  background: radial-gradient(circle at 20% 30%, #0b0f14, #000);
+}
+
+.layer-mid {
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+  opacity: 0.15;
+}
+
+.layer-front {
+  background: radial-gradient(circle at 70% 60%, rgba(255, 255, 255, 0.05), transparent 70%);
+  opacity: 0.4;
+}
+
+/* Floating animated shapes (CSS artwork) */
+.floating-shape {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  opacity: 0.3;
+  animation: float 10s ease-in-out infinite alternate;
+  filter: blur(1px);
+}
+
+.circle {
+  border-radius: 50%;
+  background: #0ff;
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 70px solid #f0f;
+  top: 70%;
+  left: 80%;
+  animation-delay: 2s;
+}
+
+.square {
+  background: #ff0;
+  top: 50%;
+  left: 50%;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0% { transform: translate(0, 0) rotate(0deg) scale(1); }
+  100% { transform: translate(40px, -60px) rotate(360deg) scale(1.3); }
+}
+
+/* Text styling */
+.text-glow {
+  color: #fff;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.4);
+  animation: slideUp 1.5s ease forwards;
+}
+
+.fade-in {
+  animation: fadeIn 2.2s ease-in forwards;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* CTA button */
+.cta-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.cta-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.2), transparent);
+  transition: all 0.5s ease;
+}
+
+.cta-btn:hover::before {
+  left: 100%;
+}
+
+.cta-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 255, 255, 0.3);
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+}
