@@ -4,13 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Stat3m3nt | Building from Curiosity</title>
+
+  <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <!-- CSS stylesheet -->
   <link href="./css/style.css" rel="stylesheet" />
 </head>
 
 <body>
 <header>
+  <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top px-4">
       <a class="navbar-brand fw-bold" href="#">Stat3m3nt</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,10 +27,10 @@
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item px-3">
-            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="/about.html">About</a>
           </li>
           <li class="nav-item px-3">
-            <a class="nav-link" href="#projects">Projects</a>
+            <a class="nav-link" href="/project.html">Projects</a>
           </li>
           <li class="nav-item px-3">
             <a class="nav-link" href="/contact.html">Contact</a>
@@ -39,8 +44,9 @@
       </div>
     </nav>
   </header>
-  <main>
-    <section id="hero" class="hero d-flex align-items-center justify-content-center text-center text-light">
+
+  <!-- Global Layers -->
+  <div class="background-layers">
     <div class="layer layer-bg"></div>
     <div class="layer layer-mid"></div>
     <div class="layer layer-front"></div>
@@ -49,6 +55,11 @@
     <div class="floating-shape circle"></div>
     <div class="floating-shape triangle"></div>
     <div class="floating-shape square"></div>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <section id="hero" class="hero d-flex align-items-center justify-content-center text-center text-light">
 
     <div class="content position-relative">
       <h1 class="display-2 fw-bold mb-3 text-glow">The Art of Building</h1>
@@ -60,7 +71,11 @@
   </section>
 </main>
 
-  <script>
+<footer class="text-center py-4 text-muted small border-top border-secondary text-light mt-5">
+  <p>&copy; 2025 Stat3m3nt - Built from Curiosity</p>
+</footer>
+
+  <!-- <script>
     document.addEventListener("mousemove", (e) => {
       const layers = document.querySelectorAll(".layer");
       const x = (e.clientX / window.innerWidth - 0.5) * 80;
@@ -70,10 +85,13 @@
         layer.style.transform = `translate(${x / speed}px, ${y / speed}px) scale(1.05)`;
       });
     });
-  </script>
+  </script> -->
 
 <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+  <script src="./js/script.js"></script>
 
 </body>
 </html>

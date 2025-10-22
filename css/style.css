@@ -3,6 +3,7 @@ body {
   overflow: hidden;
   background-color: #000;
   font-family: 'inter', sans-serif;
+
 }
 
 
@@ -11,8 +12,34 @@ body {
   overflow: hidden;
   position: relative;
   perspective: 1000px;
+} 
+
+.background-layers{
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index:0;
 }
 
+/* Ensures content scrolls over background */
+.about-page main, .about-page footer, .about-page header{
+  position: relative;
+  z-index: 10;
+  background: transparent;
+}
+
+/* Improve readability */
+.about-page main::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+/* ensures page scrolls */
+.about-page, .project-page{
+  overflow-x: hidden;
+  overflow-y: auto;
+}
 /* Layer visuals */
 .layer {
   position: absolute;
@@ -143,4 +170,45 @@ body {
 
 h1{
     font-family: 'Playfair Display', serif;
+}
+
+
+.navbar {
+  position: relative;
+  z-index: 1050 !important; /* keep navbar above everything */
+}
+
+
+ 
+
+/* Improve dropdown visibility for smaller screens */
+.navbar-collapse.show {
+  background-color: rgba(0, 0, 0, 0.9); /* dark backdrop for contrast */
+  border-radius: 0.5rem;
+  padding: 1rem;
+  backdrop-filter: blur(10px); /* modern glassy look */
+  margin: 0.5rem auto;
+} 
+
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0.15));
+  z-index: 1;
+}
+
+.card-body {
+  position: relative;
+  z-index: 2;
+}
+
+.card-title, .card-text {
+  color: #fff !important;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.6);
 }
