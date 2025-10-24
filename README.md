@@ -23,9 +23,9 @@ This portfolio is a reflection of my ongoing journey in tech - blending creativi
 
 ---
 ## 📫Contact
-📧**Email:** andrew.evboifo1@gmail.com
-💼**LinkedIn:** [linkedin.com/in/andrew-evboifo-78a655187](https://www.linkedin.com/in/andrew-evboifo-78a655187)
-⚙️**GitHub** [github.com/Stat3m3nt](https://github.com/Stat3m3nt)
+- 📧**Email:** andrew.evboifo1@gmail.com
+- 💼**LinkedIn:** [linkedin.com/in/andrew-evboifo-78a655187](https://www.linkedin.com/in/andrew-evboifo-78a655187)
+- ⚙️**GitHub** [github.com/Stat3m3nt](https://github.com/Stat3m3nt)
 ---
 
 >💭 *"Built from curiosity, driven by growth."*
